@@ -16,6 +16,6 @@
 ## We include the built test in the default test scenario in bin. To run, use the command 'make -Ibuild run'
 
 ##Header file description:
-picosha2.h is used to implement SHA256 of generating hexadecimal hash string. Hex hash string may be directly converted to big integer type defined in GMP library. 
+* picosha2.h is used to implement SHA256 of generating hexadecimal hash string. Hex hash string may be directly converted to big integer type defined in GMP library. 
 
 
