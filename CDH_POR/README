@@ -1,0 +1,20 @@
+## Required:
+* Linux (test on Ubuntu 16.04)
+* Install gcc 
+* Install PBC 
+* Install GMP 
+* Install openssl 
+* Edit the makefile (the first line) to have:
+	LIBS_HOME  : the directory where you have installed PBC, GMP and openssl.
+
+
+## To compile:
+* No optimization: make -Ibuild
+* Run test : make -Ibuild run < src/F_128.param
+
+
+## Test scenario of the CDH-based POR scheme (the default is 128-bit security):
+* The default parameters of elliptic curve are in the F_128.param file
+* The test scenario is in the main.cpp file
+
+## We include the built test in the default test scenario in bin. To run, use the command 'make -Ibuild run < src/F_128.param'
