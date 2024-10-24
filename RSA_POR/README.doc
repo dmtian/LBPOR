@@ -1,0 +1,21 @@
+## Required:
+* Linux (test on Ubuntu 16.04)
+* Install gcc 
+* Install GMP 
+* Install openssl (Recommend: version 1.1.x)
+* Edit the makefile (the first line) to have:
+	LIBS_HOME  : the directory where you have installed GMP and openssl.
+
+## To compile:
+* No optimization: make -Ibuild
+* Run test : make -Ibuild run
+
+## Test scenario of the RSA-based POR scheme (the default is 128-bit security):
+* The test scenario is in the main.cpp file
+
+## We include the built test in the default test scenario in bin. To run, use the command 'make -Ibuild run'
+
+##Header file description:
+picosha2.h is used to implement SHA256 of generating hexadecimal hash string. Hex hash string may be directly converted to big integer type defined in GMP library. 
+
+
