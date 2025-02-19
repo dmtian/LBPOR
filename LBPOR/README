@@ -1,0 +1,28 @@
+## Required:
+* Linux (test on Ubuntu 16.04)
+* Install gcc (g++) that supports -std=c++14 
+* Install gmp and mpfr
+* Install NFLlib (https://github.com/quarkslab/NFLlib)
+* Edit the makefile (the first two lines) to have:
+	NFLLIB_HOME: the directory where you have installed nfllib
+	LIBS_HOME  : the directory where you have installed gmp and mpfr
+
+
+## To compile:
+* Compile: make -Ibuild
+* Run test : make -Ibuild run
+
+
+## Test scenario of LBPOR scheme (the default is 128-bit security):
+* The default parameters are in the params.hpp file
+* The test scenario is in the main.cpp file
+
+
+## We include the built test in the default test scenario in bin. To run, use the command 'make -Ibuild run'
+
+## Related file description:
+* LBPOR.cpp and LBPOR.hpp provides all algorithm implementations in LBPOR scheme, and provide interfaces for scenario testing.
+* shake.cpp and shake.h is used to implement SHAKE128/SHAKE256. 
+* fast_fft.cpp and fast_fft.hpp is used for FFT operation among polynomials in the perturbation vector sampling (SampleP) algorithm of SamplePre.  
+* gaussian.cpp and gaussian.hpp provide the sampling algorithm of G-trapdoor (SampleG) and SampleP algorithm required in SamplePre of our scheme.
+* gaussian_sign.cpp and gaussian_sign.hpp provide the SampleG and SampleP algorithm required in SamplePre of the signature scheme.
